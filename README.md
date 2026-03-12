@@ -1,3 +1,12 @@
+```text
+███╗   ███╗ █████╗ ██╗  ██╗██╗███╗   ███╗ █████╗ ██╗     ██╗███████╗███╗   ███╗
+████╗ ████║██╔══██╗╚██╗██╔╝██║████╗ ████║██╔══██╗██║     ██║██╔════╝████╗ ████║
+██╔████╔██║███████║ ╚███╔╝ ██║██╔████╔██║███████║██║     ██║███████╗██╔████╔██║
+██║╚██╔╝██║██╔══██║ ██╔██╗ ██║██║╚██╔╝██║██╔══██║██║     ██║╚════██║██║╚██╔╝██║
+██║ ╚═╝ ██║██║  ██║██╔╝ ██╗██║██║ ╚═╝ ██║██║  ██║███████╗██║███████║██║ ╚═╝ ██║
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚══════╝╚═╝     ╚═╝
+```
+
 # Maximalism SaaS Landing Page
 
 A bold, high-energy, and visually aggressive SaaS landing page built with **Astro**, **React**, **Tailwind CSS**, and **shadcn/ui**. This project embraces the "maximalist" aesthetic—clashing colors, heavy shadows, and constant motion.
@@ -43,3 +52,22 @@ This project was inspired by and designed based on prompts from [Design Prompts]
 ---
 
 *Made with chaos and caffeine.*
+
+---
+
+## 📬 Contact
+
+```text
+   _____                      _   _       _                     
+  / ____|                    | \ | |     | |                    
+ | (___   ___  _ __  _ __  _ |  \| | __ _| |__   ___  _ __   __ _ 
+  \___ \ / _ \| '_ \| '_ \| | | . ` |/ _` | '_ \ / _ \| '_ \ / _` |
+  ____) | (_) | | | | | | | | | |\  | (_| | |_) | (_) | | | | (_| |
+ |_____/ \___/|_| |_|_| |_|_| |_| \_|\__,_|_.__/ \___/|_| |_|\__, |
+                                                              __/ |
+                                                             |___/ 
+```
+
+**Site:** [sonnynabong.dev](https://sonnynabong.dev)  
+**Email:** [info@sonnynabong.dev](mailto:info@sonnynabong.dev)
+
