@@ -1,11 +1,219 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { FloatingShape } from "@/components/FloatingShape";
+import { Rocket, Zap, Infinity as InfinityIcon, Shield, Mail, Phone, Smile } from "lucide-react";
+import '@/styles/global.css'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  {/* GLOBAL CHAOS PATTERNS */}
+  <div class="fixed inset-0 pointer-events-none z-0 opacity-10 mix-blend-screen bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTIwIDIwTDAgMEg0MEwyMCAyMFoiIGZpbGw9IiMwMEY1RDQiIGZpbGwtb3BhY2l0eT0iMC41Ii8+PC9zdmc+')]"></div>
+
+  {/* ====== HERO SECTION ====== */}
+  <section class="relative min-h-[90vh] flex items-center justify-center pt-32 pb-24 px-6 overflow-hidden">
+    {/* Background typography */}
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] md:text-[25rem] font-black text-white/10 whitespace-nowrap z-0 select-none pointer-events-none tracking-tighter mix-blend-overlay">
+      MAX OUT
+    </div>
+
+    {/* Floating Elements (Hero) */}
+    <FloatingShape type="star" color="text-max-yellow" size="w-16 h-16" className="top-[15%] left-[10%] max-md:hidden" animation="wiggle" delay="0s" />
+    <FloatingShape type="emoji" emoji="🚀" size="text-7xl" className="top-[25%] right-[15%]" animation="float" delay="1s" />
+    <FloatingShape type="circle" color="text-max-cyan" size="w-24 h-24" className="bottom-[20%] left-[20%]" animation="float-reverse" delay="2s" />
+    <FloatingShape type="sparkles" color="text-max-magenta" size="w-20 h-20" className="bottom-[30%] right-[10%] max-md:hidden" animation="pulse-glow" delay="0.5s" />
+
+    <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+      <div class="inline-block rotate-2 mb-6 bg-max-cyan text-max-muted px-6 py-2 rounded-full border-4 border-max-magenta font-black tracking-widest uppercase shadow-[4px_4px_0_#FF3AF2]">
+        The Future is Loud
+      </div>
+      
+      <h1 class="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85] mb-8 text-white text-shadow-mega mix-blend-hard-light">
+        <span class="block hover:scale-105 transition-transform duration-300">Software</span>
+        <span class="block max-gradient-text">Without</span>
+        <span class="block hover:scale-105 transition-transform duration-300">Limits</span>
+      </h1>
+      
+      <p class="text-xl md:text-3xl text-white/90 font-bold max-w-3xl mb-12 bg-[#2D1B4E]/50 backdrop-blur-md p-6 rounded-3xl border-4 border-max-yellow shadow-[8px_8px_0_#00F5D4] -rotate-1">
+        Stop building boring MVPs. Inject maximum dopamine into your workflow and watch your metrics explode! 💥
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-8 items-center justify-center">
+        <Button size="lg" className="text-xl h-20 px-12 group">
+          START CREATING NOW
+          <Zap size={32} strokeWidth={3} color="white" className="ml-2 group-hover:animate-wiggle" />
+        </Button>
+        <Button variant="outline" size="lg" className="text-xl h-20 px-12">
+          VIEW THE CHAOS
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  {/* ====== FEATURES SECTION (Broken Grid) ====== */}
+  <section id="features" class="relative py-32 px-6 bg-[#0D0D1A]/90 border-t-8 border-max-cyan">
+    {/* Section Background Pattern */}
+    <div class="absolute inset-0 pattern-dots opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #00F5D4 2px, transparent 2px)', backgroundSize: '30px 30px' }}></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto">
+      <div class="text-center mb-24">
+        <h2 class="text-6xl md:text-8xl font-black uppercase text-white tracking-widest text-shadow-triple mb-6">
+          Feature Overload
+        </h2>
+        <p class="text-2xl text-max-cyan font-black tracking-widest uppercase text-shadow-single">Everything you need. Nothing you don't.*</p>
+        <p class="text-sm text-white/70 mt-2 italic font-bold">*Actually, we included stuff you don't need too.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        {/* Feature 1 (Magenta Focus) */}
+        <Card className="border-max-magenta shadow-[8px_8px_0_#00F5D4,16px_16px_0_#FFE600] lg:translate-y-0">
+          <CardHeader className="border-max-yellow pb-8">
+            <div class="w-20 h-20 rounded-2xl bg-max-magenta/20 border-4 border-max-magenta flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(255,58,242,0.5)]">
+              <Zap size={48} strokeWidth={3} color="#FF3AF2" className="shadow-[0_0_20px_rgba(255,58,242,0.5)]" />
+            </div>
+            <CardTitle>Hyper Speed</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-xl text-white font-bold text-shadow-single">Blazing fast infrastructure that makes your current stack look like it's running on a potato.</CardDescription>
+          </CardContent>
+        </Card>
+
+        {/* Feature 2 (Cyan Focus - Offset) */}
+        <Card className="border-max-cyan shadow-[8px_8px_0_#FF3AF2,16px_16px_0_#7B2FFF] md:translate-y-12 rotate-1">
+          <CardHeader className="border-max-magenta pb-8">
+            <div class="w-20 h-20 rounded-full bg-max-cyan/20 border-4 border-max-cyan flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(0,245,212,0.5)]">
+              <InfinityIcon size={48} strokeWidth={3} color="#00F5D4" className="shadow-[0_0_20px_rgba(0,245,212,0.5)]" />
+            </div>
+            <CardTitle>Infinite Scale</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-xl text-white font-bold text-shadow-single">We don't do limits. Scale to the moon and back without breaking a single sweat.</CardDescription>
+          </CardContent>
+        </Card>
+
+        {/* Feature 3 (Yellow Focus) */}
+        <Card className="border-max-yellow shadow-[8px_8px_0_#FF6B35,16px_16px_0_#00F5D4] lg:-translate-y-4 -rotate-2">
+          <CardHeader className="border-max-orange pb-8">
+            <div class="w-20 h-20 rounded-bl-3xl rounded-tr-3xl bg-max-yellow/20 border-4 border-max-yellow flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(255,230,0,0.5)]">
+              <Shield size={48} strokeWidth={3} color="#FFE600" className="shadow-[0_0_20px_rgba(255,230,0,0.5)]" />
+            </div>
+            <CardTitle>Fort Knox</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-xl text-white font-bold text-shadow-single">Security so tight even we don't know how to get in. Your data is literally locked in a virtual vault.</CardDescription>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  {/* ====== PRICING SECTION ====== */}
+  <section id="pricing" class="relative py-32 px-6 overflow-hidden border-t-8 border-max-yellow">
+    {/* Large background text */}
+    <div class="absolute inset-y-0 left-0 text-[10rem] font-black text-max-yellow/20 writing-mode-vertical uppercase tracking-widest pl-4 select-none pointer-events-none">
+      PRICING
+    </div>
+
+    <FloatingShape type="emoji" emoji="💸" size="text-8xl" className="top-[10%] left-[80%]" animation="bounce-subtle" delay="0s" />
+    <FloatingShape type="square" color="text-max-orange" size="w-16 h-16" className="bottom-[10%] left-[5%]" animation="spin-slow" delay="1s" />
+
+    <div class="relative z-10 max-w-6xl mx-auto">
+      <div class="text-center mb-24">
+        <h2 class="text-6xl md:text-8xl font-black uppercase text-white tracking-widest text-shadow-mega mb-6 inline-block -rotate-2">
+          Pay Us Money
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        {/* Tier 1 (Basic) */}
+        <Card className="border-max-orange border-8 bg-[#2D1B4E]/60 shadow-[12px_12px_0_#FF3AF2] md:justify-self-end w-full max-w-md">
+          <CardHeader className="text-center border-b-8 border-max-purple">
+            <CardTitle className="text-4xl text-max-yellow">NOOB TIER</CardTitle>
+            <div class="mt-6 font-black text-6xl text-white text-shadow-single">$FREE<span class="text-3xl text-white/50">/mo</span></div>
+          </CardHeader>
+          <CardContent className="pt-8">
+            <ul class="space-y-4 font-bold text-xl mb-8 text-white">
+              <li class="flex items-center"><Smile size={24} strokeWidth={3} color="#00F5D4" className="mr-3" /> You get the basics</li>
+              <li class="flex items-center"><Smile size={24} strokeWidth={3} color="#00F5D4" className="mr-3" /> 1 User maximum</li>
+              <li class="flex items-center"><Smile size={24} strokeWidth={3} color="#00F5D4" className="mr-3" /> Community support only</li>
+              <li class="flex items-center text-white/30"><Smile size={24} strokeWidth={3} color="rgba(255,255,255,0.3)" className="mr-3" /> No dopamine injection</li>
+            </ul>
+            <Button variant="secondary" className="w-full text-lg h-16">Get Started</Button>
+          </CardContent>
+        </Card>
+
+        {/* Tier 2 (Pro) - Highlighted */}
+        <div class="relative w-full max-w-md">
+          {/* Glowing aura behind pro card */}
+          <div class="absolute -inset-4 bg-gradient-to-r from-[#FF3AF2] via-[#00F5D4] to-[#FFE600] rounded-[2.5rem] blur-xl opacity-70 animate-gradient-shift bg-[length:200%_auto]"></div>
+          
+          <Card className="relative z-10 border-max-magenta border-8 bg-[#0D0D1A] shadow-[16px_16px_0_#00F5D4,32px_32px_0_#FFE600] scale-105 rotate-1 hover:rotate-2 hover:scale-110">
+            <div class="absolute -top-6 -right-6 bg-max-yellow text-[#0D0D1A] font-black uppercase tracking-widest px-6 py-2 rounded-full rotate-12 border-4 border-max-magenta shadow-[4px_4px_0_#FF3AF2] z-20 text-xl">
+              POPULAR! 🔥
+            </div>
+            <CardHeader className="text-center border-b-8 border-dashed border-max-cyan bg-max-magenta/10">
+              <CardTitle className="text-5xl max-gradient-text">GOD TIER</CardTitle>
+              <div class="mt-6 font-black text-7xl text-white text-shadow-double">$99<span class="text-3xl text-white/50">/mo</span></div>
+            </CardHeader>
+            <CardContent className="pt-8 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHBhdGggZD0iTTEwIDEwTDExIDExSDEwTDEwIDEwWiIgZmlsbD0iI0ZGM0FGMiIgZmlsbC1vcGFjaXR5PSIwLjMiLz48L3N2Zz4=')]">
+              <ul class="space-y-6 font-bold text-2xl mb-10 text-white">
+                <li class="flex items-center"><Rocket size={32} strokeWidth={3} color="#FF3AF2" className="mr-4" /> Everything everywhere</li>
+                <li class="flex items-center"><Rocket size={32} strokeWidth={3} color="#FF3AF2" className="mr-4" /> Infinite users</li>
+                <li class="flex items-center"><Rocket size={32} strokeWidth={3} color="#FF3AF2" className="mr-4" /> Priority 24/7 screaming</li>
+                <li class="flex items-center"><Rocket size={32} strokeWidth={3} color="#FF3AF2" className="mr-4 text-shadow-single" /> 100% DOPAMINE GUARANTEE</li>
+              </ul>
+              <Button className="w-full text-2xl h-20 shadow-[0_0_30px_rgba(255,58,242,0.8)]">BUY NOW</Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ====== ABOUT SECTION ====== */}
+  <section id="about" class="relative py-32 px-6 bg-max-muted border-y-8 border-dashed border-max-magenta">
+     {/* Diagonal Stripes Pattern */}
+     <div class="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #FF6B35, #FF6B35 20px, transparent 20px, transparent 40px)' }}></div>
+     
+     <div class="relative z-10 max-w-5xl mx-auto bg-[#0D0D1A]/90 p-12 md:p-24 rounded-[3rem] border-8 border-max-cyan shadow-[16px_16px_0_#FF3AF2,-16px_-16px_0_#FFE600]">
+        <FloatingShape type="triangle" color="text-max-yellow" size="w-24 h-24" className="-top-12 -left-12 drop-shadow-[4px_4px_0_#FF3AF2]" animation="spin-slow" />
+        <h2 class="text-5xl md:text-7xl font-black uppercase mb-12 text-white text-shadow-double -rotate-1">We Hate Boring.</h2>
+        <div class="space-y-8 text-2xl font-black leading-relaxed text-white">
+          <p>Founded in 2026 because we couldn't stand looking at one more minimalist whitespace-heavy corporate landing page.</p>
+          <p class="bg-max-magenta/20 p-8 rounded-3xl border-4 border-max-magenta shadow-[8px_8px_0_#FF3AF2]">Our mission is simple: To make software that aggressively assaults your visual senses while performing phenomenally well under the hood.</p>
+          <p>We are a team of chaos engineers, hyperpop enthusiasts, and caffeine addicts.</p>
+        </div>
+     </div>
+  </section>
+
+  {/* ====== CONTACT SECTION ====== */}
+  <section id="contact" class="relative py-40 px-6 border-b-8 border-max-purple">
+    <FloatingShape type="emoji" emoji="📞" size="text-8xl" className="top-20 right-20" animation="wiggle" delay="0s" />
+    <FloatingShape type="circle" color="text-max-magenta" size="w-32 h-32" className="bottom-20 left-10" animation="float" delay="2s" />
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <h2 class="text-7xl md:text-[8rem] font-black uppercase text-white text-shadow-mega leading-[0.8] mb-12">Yell At Us</h2>
+      <p class="text-3xl font-bold mb-16 text-max-cyan">We're probably awake right now.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <a href="mailto:chaos@maximalism.com" class="group flex flex-col items-center justify-center p-12 rounded-3xl border-8 border-max-magenta bg-[#2D1B4E]/50 hover:bg-max-magenta transition-colors duration-300 shadow-[8px_8px_0_#FFE600] hover:shadow-[16px_16px_0_#00F5D4] hover:-translate-y-2">
+          <Mail size={64} strokeWidth={3} color="#FFE600" className="mb-6 group-hover:text-white group-hover:animate-bounce-subtle" />
+          <span class="text-3xl font-black uppercase tracking-widest text-white group-hover:text-[#0D0D1A]">Email</span>
+        </a>
+        <a href="tel:1800MAXOUT" class="group flex flex-col items-center justify-center p-12 rounded-3xl border-8 border-max-cyan bg-[#2D1B4E]/50 hover:bg-max-cyan transition-colors duration-300 shadow-[8px_8px_0_#FF3AF2] hover:shadow-[16px_16px_0_#FFE600] hover:translate-y-2">
+          <Phone size={64} strokeWidth={3} color="#FF3AF2" className="mb-6 group-hover:text-[#0D0D1A] group-hover:animate-wiggle" />
+          <span class="text-3xl font-black uppercase tracking-widest text-white group-hover:text-[#0D0D1A]">Scream</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ====== FOOTER ====== */}
+  <footer class="py-12 px-6 bg-max-magenta text-center">
+    <p class="text-2xl font-black uppercase text-max-muted tracking-widest">© 2026 MAXOUT CORP. ALL RIGHTS RESERVED. (OR NOT, WE DON'T CARE)</p>
+  </footer>
 </Layout>
