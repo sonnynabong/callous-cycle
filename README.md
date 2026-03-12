@@ -2,6 +2,8 @@
 
 A bold, high-energy, and visually aggressive SaaS landing page built with **Astro**, **React**, **Tailwind CSS**, and **shadcn/ui**. This project embraces the "maximalist" aesthetic—clashing colors, heavy shadows, and constant motion.
 
+[Live Demo](https://maximalismdesign.vercel.app/)
+
 ## 🚀 Features
 
 - **Hero Overload:** High-impact typography and floating 3D-feeling shapes.
