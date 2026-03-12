@@ -1,14 +1,69 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "MAX OUT | The Loudest Software on Earth", 
+	description = "Stop building boring MVPs. Inject maximum dopamine into your workflow and watch your metrics explode! 💥"
+} = Astro.props;
+
+// Construct actual canonical URL using Astro's built-in APIs
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"name": "MAX OUT",
+	"applicationCategory": "BusinessApplication",
+	"operatingSystem": "All",
+	"url": canonicalURL.href,
+	"offers": {
+		"@type": "Offer",
+		"price": "99.00",
+		"priceCurrency": "USD"
+	},
+	"description": description
+};
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<!-- Primary SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalURL} />
+		<meta name="theme-color" content="#FF3AF2" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content="MAX OUT" />
+		<meta property="og:image" content={new URL('/og-image.jpg', canonicalURL)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL('/og-image.jpg', canonicalURL)} />
+
+		<!-- JSON-LD Structured Data Schema -->
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+
 	</head>
-	<body>
+	<body class="bg-[#0D0D1A] text-white">
 		<slot />
 	</body>
 </html>
