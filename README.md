@@ -1,46 +1,43 @@
-# Astro Starter Kit: Basics
+# Maximalism SaaS Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+A bold, high-energy, and visually aggressive SaaS landing page built with **Astro**, **React**, **Tailwind CSS**, and **shadcn/ui**. This project embraces the "maximalist" aesthetic—clashing colors, heavy shadows, and constant motion.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Features
 
-## 🚀 Project Structure
+- **Hero Overload:** High-impact typography and floating 3D-feeling shapes.
+- **Asymmetric Grid:** A features section that breaks the "standard" layout rules.
+- **Hyper-Pop Pricing:** Neon tiers with high-contrast visibility.
+- **Chaos About Section:** A bold mission statement that "hates boring."
+- **Interactive Contact:** Vibrant buttons and "Yell At Us" call-to-action.
+- **Performance First:** Powered by Astro for lightning-fast delivery despite the visual noise.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🎨 Tech Stack
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+- **Framework:** [Astro](https://astro.build/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Animations:** [Tailwind Animate](https://github.com/jamiebuilds/tailwindcss-animate)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Getting Started
 
-## 🧞 Commands
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run development server:
+   ```bash
+   npm run dev
+   ```
+3. Build for production:
+   ```bash
+   npm run build
+   ```
 
-All commands are run from the root of the project, from a terminal:
+## 📜 Credits
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+This project was inspired by and designed based on prompts from [Design Prompts](https://www.designprompts.dev/).
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+*Made with chaos and caffeine.*
